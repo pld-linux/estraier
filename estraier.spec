@@ -1,12 +1,12 @@
 Summary:	estraier - a full-text search engine
 Summary(pl):	estraier - silnik przeszukiwania pe³notekstowego
 Name:		estraier
-Version:	1.2.13
+Version:	1.2.23
 Release:	1
 License:	GPL
 Group:		Applications/Text
 Source0:	http://estraier.sourceforge.net/%{name}-%{version}.tar.gz
-# Source0-md5:	68c6c3b998270245492e166b0b31a6d8
+# Source0-md5:	533260da1d7b86b79eb1908af4fc86c7
 URL:		http://estraier.sourceforge.net/
 BuildRequires:	chasen-devel
 BuildRequires:	kakasi-devel
