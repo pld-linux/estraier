@@ -1,4 +1,5 @@
 Summary:	estraier - a full-text search engine
+Summary(pl):	estraier - silnik przeszukiwania pe³notekstowego
 Name:		estraier
 Version:	1.2.13
 Release:	1
@@ -7,9 +8,9 @@ Group:		Applications/Text
 Source0:	http://estraier.sourceforge.net/%{name}-%{version}.tar.gz
 # Source0-md5:	68c6c3b998270245492e166b0b31a6d8
 URL:		http://estraier.sourceforge.net/
-BuildRequires:	zlib-devel
-BuildRequires:	kakasi-devel
 BuildRequires:	chasen-devel
+BuildRequires:	kakasi-devel
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -19,6 +20,14 @@ including specified words. The principal purpose of Estraier is to
 realize a full-text search system of a web site. It functions
 similarly to Google, but for a personal web site or sites in an
 intranet.
+
+%description -l pl
+estraier to system przeszukiwania pe³notekstowego do u¿ytku
+w³asnego. Przeszukiwanie pe³notekstowe oznacza funkcje do szukania w
+du¿ej liczbie dokumentów pewnych dokumentów zawieraj±cych okre¶lone
+s³owa. Zasadniczym celem Straiera jest realizacja systemu
+przeszukiwania pe³notekstowego dla serwisu WWW. Dzia³a podobnie do
+Google, ale dla w³asnej strony lub w intranecie.
 
 %prep
 %setup -q
