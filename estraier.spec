@@ -1,15 +1,22 @@
+# TODO:
+# - --with-sysqdbm
+#
+# Conditional build:
+%bcond_without	chasen		# build without chasen, Japanese Morphological Analysis System.
+%bcond_without	kakasi		# build without kakasi, kanji kana simple inverter
+#
 Summary:	estraier - a full-text search engine
 Summary(pl):	estraier - silnik przeszukiwania pe³notekstowego
 Name:		estraier
 Version:	1.2.28
-Release:	1
+Release:	1.2
 License:	GPL
 Group:		Applications/Text
 Source0:	http://estraier.sourceforge.net/%{name}-%{version}.tar.gz
 # Source0-md5:	f099d80e5ad03cb6255db0397225a069
 URL:		http://estraier.sourceforge.net/
-BuildRequires:	chasen-devel
-BuildRequires:	kakasi-devel
+%{?with_chasen:BuildRequires:	chasen-devel}
+%{?with_kakasi:BuildRequires:	kakasi-devel}
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,8 +43,9 @@ Google, ale dla w³asnej strony lub w intranecie.
 %configure \
 	--libexecdir=%{_libdir}/%{name} \
 	--enable-regex \
-	--enable-chasen \
-	--enable-kakasi
+	%{?with_chasen:--enable-chasen} \
+	%{?with_kakasi:--enable-kakasi} \
+	--enable-dlfilter \
 
 %{__make}
 
@@ -46,6 +54,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+install estfind $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
