@@ -6,7 +6,7 @@
 %bcond_without	kakasi		# build without kakasi, kanji kana simple inverter
 #
 Summary:	estraier - a full-text search engine
-Summary(pl.UTF-8):   estraier - silnik przeszukiwania pełnotekstowego
+Summary(pl.UTF-8):	estraier - silnik przeszukiwania pełnotekstowego
 Name:		estraier
 Version:	1.2.28
 Release:	1.2
