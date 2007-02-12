@@ -6,7 +6,7 @@
 %bcond_without	kakasi		# build without kakasi, kanji kana simple inverter
 #
 Summary:	estraier - a full-text search engine
-Summary(pl):	estraier - silnik przeszukiwania pe³notekstowego
+Summary(pl.UTF-8):   estraier - silnik przeszukiwania peÅ‚notekstowego
 Name:		estraier
 Version:	1.2.28
 Release:	1.2
@@ -28,13 +28,13 @@ realize a full-text search system of a web site. It functions
 similarly to Google, but for a personal web site or sites in an
 intranet.
 
-%description -l pl
-estraier to system przeszukiwania pe³notekstowego do u¿ytku
-w³asnego. Przeszukiwanie pe³notekstowe oznacza funkcje do szukania w
-du¿ej liczbie dokumentów pewnych dokumentów zawieraj±cych okre¶lone
-s³owa. Zasadniczym celem Straiera jest realizacja systemu
-przeszukiwania pe³notekstowego dla serwisu WWW. Dzia³a podobnie do
-Google, ale dla w³asnej strony lub w intranecie.
+%description -l pl.UTF-8
+estraier to system przeszukiwania peÅ‚notekstowego do uÅ¼ytku
+wÅ‚asnego. Przeszukiwanie peÅ‚notekstowe oznacza funkcje do szukania w
+duÅ¼ej liczbie dokumentÃ³w pewnych dokumentÃ³w zawierajÄ…cych okreÅ›lone
+sÅ‚owa. Zasadniczym celem Straiera jest realizacja systemu
+przeszukiwania peÅ‚notekstowego dla serwisu WWW. DziaÅ‚a podobnie do
+Google, ale dla wÅ‚asnej strony lub w intranecie.
 
 %prep
 %setup -q
